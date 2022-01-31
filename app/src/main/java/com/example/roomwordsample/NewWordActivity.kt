@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -33,5 +34,10 @@ class NewWordActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_REPLY = "com.example.android.wordlistsql.REPLY"
+    }
+
+    fun fire_store_page(view: View){
+        var internt = Intent(this,FireStoreActivity::class.java)
+        startActivity(intent)
     }
 }
